@@ -42,4 +42,8 @@
     height: 138.77999877929688px;
     width: 220px;
   }
+
+  .main_portfolio-header-wrapper {
+    max-width: 730px;
+  }
 }

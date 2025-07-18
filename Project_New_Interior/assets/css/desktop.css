@@ -1,0 +1,60 @@
+/* # ===== DESKTOP ===== */
+
+@media only screen and (min-width: 992px) {
+  header {
+    height: 810px;
+    gap: 250px;
+    object-fit: cover;
+  }
+
+  .main_portfolio-header-pictures {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .main_portfolio-header-picture-box {
+    height: 214.3800048828125px;
+    width: 360px;
+  }
+
+  .main_services-content {
+    max-width: 1170px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main_services-content-hero {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .main_services-content-hero div p {
+    width: 310px;
+  }
+
+  .main_blog-header-wrapper {
+    max-width: 1220px;
+  }
+
+  .main_parallax-content {
+    max-width: 1170px;
+  }
+  .main_testimonials-header-text {
+    padding: 50px;
+  }
+  .main_testimonials-pictures {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1170px;
+  }
+  .main_testimonials-picture-wrapper p {
+    max-width: 310px;
+  }
+
+  .main_contact_header {
+    max-width: 1170px;
+  }
+}
