@@ -37,6 +37,9 @@
   .main_blog-header-wrapper {
     max-width: 1220px;
   }
+  .main_portfolio-header-wrapper {
+    max-width: 1150px;
+  }
 
   .main_parallax-content {
     max-width: 1170px;
