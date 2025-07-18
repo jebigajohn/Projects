@@ -1,8 +1,12 @@
+/* # GLOBAL STYLING */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* # FONT FACE */
 
 @font-face {
   font-family: "Alegreya_SC";
@@ -25,6 +29,8 @@
   src: url(../fonts/Nixie_One/NixieOne-Regular.ttf);
 }
 
+/* # FIGMA REFERENCE */
+
 :root {
   font-size: 14px;
   --font-family_Alegreya_SC: "Alegreya_SC";
@@ -38,6 +44,8 @@
   --color_readmore: #4da7ca;
   --color-testimonial_text: #6a6a6a;
 }
+
+/* # HEADER */
 
 header {
   display: flex;
@@ -108,6 +116,8 @@ header {
   justify-content: center;
   text-align: center;
 }
+
+/* # PORTFOLIO */
 
 .main_portfolio {
   display: flex;
@@ -229,6 +239,8 @@ header {
   color: black;
 }
 
+/* # SERVICES */
+
 .main_services {
   background: url(../img/Backgrounds/background2.png) center/cover;
   padding-top: 100px;
@@ -296,6 +308,8 @@ header {
   width: 306px;
   color: white;
 }
+
+/* # BLOG */
 
 .main_blog {
   display: flex;
@@ -401,6 +415,8 @@ header {
   text-decoration: underline;
 }
 
+/* # PARALLAX */
+
 .main_parallax {
   background: url(../img/Backgrounds/background6.png) center/cover;
   padding-top: 100px;
@@ -439,6 +455,8 @@ header {
   color: rgb(0, 0, 0);
   background-color: #ffffff;
 }
+
+/* # TESTMONIAL */
 
 .main_testimonials-pictures {
   gap: 50px;
@@ -509,6 +527,8 @@ header {
   font-family: var(--font-family_Helvetica_Neue);
   font-weight: 100;
 }
+
+/* # CONTACT FORMULAR */
 
 .main_contact {
   background: url(../img/Backgrounds/background7.png) center/cover;
@@ -609,6 +629,8 @@ header {
   background-color: white;
   color: black;
 }
+
+/* # FOOTER */
 
 footer {
   background-color: #2b3e51;
