@@ -1,0 +1,45 @@
+/* # ==== TABLET VERSION ===== */
+@media only screen and (min-width: 768px) {
+  .main_portfolio-header-pictures {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .header_hero h1 {
+    font-size: 4rem;
+  }
+
+  .main_services-content {
+    max-width: 750px;
+  }
+
+  .main_services-content-hero div p {
+    width: 651px;
+  }
+
+  .main_blog-header-pictures {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .main_parallax-content {
+    max-width: 750px;
+  }
+
+  .main_testimonials-picture-wrapper {
+    max-width: 720px;
+    text-align: center;
+    padding: 10px 50px;
+  }
+
+  .main_testimonials-picture-wrapper p {
+    width: 670px;
+  }
+
+  .main_portfolio-header-picture-box {
+    height: 138.77999877929688px;
+    width: 220px;
+  }
+}
