@@ -516,7 +516,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   height: 100vh;
 }
 
@@ -544,9 +543,9 @@ header {
   font-size: 2.57rem;
   color: rgb(255, 255, 255);
 }
+
 .main_contact_header h2 {
   font-family: var(--font-family_Helvetica_Neue);
-
   color: white;
 }
 
@@ -560,44 +559,55 @@ header {
   height: 100%;
   gap: 10px;
 }
-.main_contact_header div:nth-of-type(2) a {
-  width: 85px;
-  height: 34px;
-  text-decoration: none;
-  text-align: center;
-  padding: 10px 10px;
-  color: white;
-  border: 1px solid white;
-  font-family: var(--font-family_Helvetica_Neue);
-}
-.main_contact_header div:nth-of-type(2) input {
-  border: 1px solid #cccccc;
-  background-color: #3a4f5200;
-  font-family: var(--font-family_Helvetica_Neue);
-  padding: 10px 10px;
-  max-width: 555px;
-  border-radius: 5px;
+
+.main_contact_header form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   width: 100%;
 }
-.main_contact_header div:nth-of-type(2) input::placeholder {
+
+.main_contact_header input,
+.main_contact_header textarea {
+  border: 1px solid #cccccc;
+  background-color: rgba(58, 79, 82, 0);
+  font-family: var(--font-family_Helvetica_Neue);
+  padding: 10px;
+  max-width: 555px;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+}
+
+.main_contact_header input::placeholder,
+.main_contact_header textarea::placeholder {
   color: white;
   font-family: var(--font-family_Helvetica_Neue);
 }
 
-.main_contact_header div:nth-of-type(2) textarea {
-  border: 1px solid #cccccc;
-  background-color: #3a4f5200;
-  font-family: var(--font-family_Helvetica_Neue);
-  border-radius: 5px;
-  width: 100%;
-  max-width: 555px;
-  padding-left: 10px;
+.main_contact_header textarea {
   padding-top: 10px;
   padding-bottom: 20px;
+  resize: none;
 }
-.main_contact_header div:nth-of-type(2) textarea::placeholder {
+
+.main_contact_header button[type="submit"] {
+  width: 120px;
+  height: 40px;
+  padding: 10px;
+  background-color: transparent;
   color: white;
+  border: 1px solid white;
   font-family: var(--font-family_Helvetica_Neue);
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  border-radius: 5px;
+}
+
+.main_contact_header button[type="submit"]:hover {
+  background-color: white;
+  color: black;
 }
 
 footer {
