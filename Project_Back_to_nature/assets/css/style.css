@@ -1,0 +1,593 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url(../fonts/Urbanist/Urbanist-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: "Urbanist";
+}
+
+nav .menu_links {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  padding: 16px 100px;
+}
+
+nav .campsideheader {
+  border: 1px solid black;
+  border-radius: 45px;
+  padding: 8px;
+  width: 100%;
+}
+
+nav .burger-wrapper {
+  position: absolute;
+  top: 35px;
+  right: 120px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+nav .burger-wrapper .burger {
+  background-color: rgb(0, 0, 0);
+  height: 4px;
+  width: 30px;
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+.backtonatureheader {
+  padding: 0 20px;
+}
+
+.div-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.div-header_text_box {
+  position: absolute;
+  top: 170px;
+  left: 60px;
+}
+
+.div-header_text {
+  font-family: "Urbanist";
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 80%;
+}
+
+.div-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.div-form button {
+  width: 295px;
+  height: 56px;
+  border-radius: 30px;
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+.div-form button:nth-of-type(1) {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+.div-form button:nth-of-type(2) {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+.div-form button:nth-of-type(3) {
+  background-color: #a9cba6;
+  color: rgb(255, 255, 255);
+  border: 1px solid black;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+
+.div_cards {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+}
+
+.div_cards-heading {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.div_cards-heading h1 {
+  font-size: 40px;
+  font-weight: 900;
+}
+.div_cards-heading p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 19.22px;
+}
+.cards h1 {
+  font-weight: 700;
+  font-style: bold;
+  line-height: 26.78px;
+  letter-spacing: 0.24px;
+}
+.cards p {
+  display: inline-block;
+  font-weight: 300;
+  font-style: light;
+  line-height: 100%;
+  letter-spacing: 0.37px;
+}
+
+.illustration_card-1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 232.62770080566406px;
+  height: 340px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: black;
+  border-radius: 15.68px;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+.illustration_card-2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 232.62770080566406px;
+  height: 340px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: black;
+  border-radius: 15.68px;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+.illustration_card-3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 232.62770080566406px;
+  height: 340px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: black;
+  border-radius: 15.68px;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+.illustration_card-4 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 232.62770080566406px;
+  height: 340px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: black;
+  border-radius: 15.68px;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+.illustration_card-5 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 232.62770080566406px;
+  height: 340px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: black;
+  border-radius: 15.68px;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+
+.div_cards-button button {
+  width: 295px;
+  height: 56px;
+  border-radius: 30px;
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+
+.div_cards-button button {
+  background-color: #a9cba6;
+  color: rgb(255, 255, 255);
+  border: 1px solid black;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+
+.section_infocards {
+  background-image: url(../img/Sonstiges/greenbulb.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 64px;
+}
+
+.div_carcards1 {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+}
+
+.div_carcards-heading {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.div_carcards-heading h1 {
+  font-size: 40px;
+  font-weight: 900;
+}
+.div_carcards-heading p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+}
+
+.carcards_flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 19.22px;
+}
+
+.section_carcards {
+  background-image: url(../img/Sonstiges/bluebulb.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.illustration_carcard-1 {
+  width: 353px;
+  height: 552px;
+  border: 1px solid black;
+  color: black;
+  border-radius: 50px;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+
+.illustration_carcard-1-img img {
+  border-bottom: 1px solid black;
+  width: 352px;
+  margin-bottom: -4px;
+}
+
+.carcardwrapper1 {
+  padding: 14px 34px;
+  background-color: #f0cea0;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.carcardwrapper1 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7.12px;
+}
+.illustration_carcard-1-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.illustration_carcard-1-header h1 {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.illustration_carcard-1-header .beforeh2 {
+  font-weight: 700;
+  font-size: 20px;
+}
+.illustration_carcard-1-header h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.illustration_carcard-1-list li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.div_carcards-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.div_carcards-button .div_carcards-button-1 {
+  width: 295px;
+  height: 56px;
+  border-radius: 30px;
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+}
+.div_carcards-button .div_carcards-button-2 {
+  width: 295px;
+  height: 56px;
+  border-radius: 30px;
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+}
+
+.div_carcards-button-1 {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+.div_carcards-button-2 {
+  background-color: #a9cba6;
+  color: rgb(255, 255, 255);
+  border: 1px solid black;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+.div_carcards-button-1 button {
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  font-style: Bold;
+  background-color: #ffffff;
+}
+.div_carcards-button-2 button {
+  background-color: #a9cba6;
+  border: none;
+  background-color: none;
+  font-weight: 700;
+  font-size: 16px;
+  font-style: Bold;
+  color: white;
+}
+
+.illustration_carcard-2 {
+  width: 353px;
+  height: 552px;
+  border: 1px solid black;
+  color: black;
+  border-radius: 50px;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+
+.illustration_carcard-2-img img {
+  border-bottom: 1px solid black;
+  width: 352px;
+  margin-bottom: -4px;
+}
+
+.carcardwrapper2 {
+  padding: 14px 34px;
+  background-color: #f0cea0;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.carcardwrapper2 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7.12px;
+}
+.illustration_carcard-2-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.illustration_carcard-2-header h1 {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.illustration_carcard-2-header .beforeh2 {
+  font-weight: 700;
+  font-size: 20px;
+}
+.illustration_carcard-2-header h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.illustration_carcard-2-list li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.illustration_carcard-3 {
+  width: 353px;
+  height: 552px;
+  border: 1px solid black;
+  color: black;
+  border-radius: 50px;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+}
+
+.illustration_carcard-3-img img {
+  border-bottom: 1px solid black;
+  width: 352px;
+  margin-bottom: -4px;
+}
+
+.carcardwrapper3 {
+  padding: 14px 34px;
+  background-color: #f0cea0;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px -4px 0px 0px #00000040 inset;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.carcardwrapper3 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7.12px;
+}
+.illustration_carcard-3-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.illustration_carcard-3-header h1 {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.illustration_carcard-3-header .beforeh2 {
+  font-weight: 700;
+  font-size: 20px;
+}
+.illustration_carcard-3-header h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.illustration_carcard-3-list li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+footer {
+  border-top: 2px solid black;
+  padding: 24px;
+}
+
+.footer_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer_section img {
+  height: 74px;
+  width: 84px;
+}
+
+.footer_section .footer_links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+.footer_links a {
+  color: black;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.footer_socials {
+  display: flex;
+  gap: 24px;
+}
+
+.footer_socials img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer_dsvo {
+  display: flex;
+}
+.footer_dsvo a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding: 0 10px;
+}
+
+.footer_dsvo a:not(:first-child)::before {
+  content: "|";
+  position: absolute;
+  left: 0;
+  color: #000;
+}

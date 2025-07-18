@@ -1,0 +1,43 @@
+/* # ==== TABLET VERSION ===== */
+@media only screen and (min-width: 768px) {
+  /* !!! ==== In einem Breakpoint werden die Änderungen gegenüber den vorgegangenen Regeln ausgeführt */
+  .div-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .carcards_flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 64px;
+  }
+
+  .footer_section .footer_links {
+    display: flex;
+    flex-direction: row;
+    gap: 55px;
+  }
+
+  .div-header_text_box {
+    position: absolute;
+    top: 270px;
+    left: 120px;
+  }
+
+  .div-header_text {
+    font-family: "Urbanist";
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 80%;
+  }
+}

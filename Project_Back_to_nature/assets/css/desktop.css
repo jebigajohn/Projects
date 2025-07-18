@@ -1,0 +1,67 @@
+/* # ==== DESKTOP VERSION ===== */
+@media only screen and (min-width: 992px) {
+  nav .burger-wrapper {
+    display: none;
+  }
+
+  nav .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .menu .menu_links {
+    display: flex;
+    gap: 40px;
+  }
+  nav .menu .menu_links a {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+  }
+  nav .menu .menu_links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+
+  .div-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .carcards_flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 64px;
+  }
+
+  .footer_section .footer_links {
+    display: flex;
+    flex-direction: row;
+    gap: 55px;
+  }
+
+  .div-header_text_box {
+    position: absolute;
+    top: 440px;
+    left: 150px;
+  }
+
+  .div-header_text {
+    font-family: "Urbanist";
+    font-size: 100x;
+    font-weight: 900;
+    line-height: 80%;
+  }
+}
