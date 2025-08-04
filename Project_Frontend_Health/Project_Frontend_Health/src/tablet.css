@@ -1,0 +1,36 @@
+/* ==== TABLET (kleiner als 992px, aber größer als 768px) ==== */
+@media only screen and (max-width: 991px) {
+  /* Anpassungen für Tablets */
+  .header_top-banner-secondcontainer h1 {
+    font-size: 0.8rem;
+  }
+
+  .footer_top-banner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer_navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .footer_navbar-logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-content: flex-start;
+  }
+
+  .footer_navbar-buttons {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    justify-content: center;
+  }
+
+  .footer_navbar-ref {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-content: flex-end;
+  }
+}
