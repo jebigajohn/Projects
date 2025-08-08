@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project-TS_Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- Auswahl der Rundenzahl -->
+    <div id="round-selection">
+      <p id="round-info">How many rounds?</p>
+
+      <label> <input type="radio" name="rounds" value="5" /> 5 </label>
+      <label> <input type="radio" name="rounds" value="10" /> 10 </label>
+      <label> <input type="radio" name="rounds" value="15" /> 15 </label>
+      <label> <input type="radio" name="rounds" value="20" /> 20 </label>
+    </div>
+
+    <!-- Scoreboard -->
+    <div id="scoreboard">
+      <div class="player-area">
+        <div class="emoji-circle" id="player-emoji"></div>
+        <span id="player-label">You</span>
+      </div>
+
+      <span id="score">0 : 0</span>
+      <div class="player-area">
+        <span id="cpu-label">CPU</span>
+        <div class="emoji-circle" id="cpu-emoji"></div>
+      </div>
+    </div>
+
+    <h1 id="game-status">Let’s play</h1>
+
+    <!-- Duell-Buttons -->
+    <div id="buttons">
+      <button data-move="rock"></button>
+      <button data-move="paper"></button>
+      <button data-move="scissors"></button>
+    </div>
+
+    <div id="game-end-hint" style="display: none">👇</div>
+
+    <p id="instruction">Make your move.</p>
+
+    <a href="#" id="restart">restart</a>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
