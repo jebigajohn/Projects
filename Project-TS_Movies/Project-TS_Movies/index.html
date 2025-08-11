@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie DB</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Movies for You</h1>
+        <h2>The best MovieDB</h2>
+      </header>
+
+      <section id="controls">
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search movies..." />
+          <button id="searchButton">Search</button>
+        </div>
+
+        <div class="sort-buttons">
+          <button id="sortYearAsc">YEAR UP</button>
+          <button id="sortYearDesc">YEAR DOWN</button>
+          <button id="sortBestRate">BEST RATE</button>
+        </div>
+      </section>
+
+      <section id="infoMessage" style="display: none">No movies found.</section>
+
+      <section id="movieList">
+        <!-- Movie cards werden hier per TypeScript eingefügt -->
+      </section>
+    </main>
+
+    <script type="module" src="./src/movies.ts"></script>
+  </body>
+</html>
