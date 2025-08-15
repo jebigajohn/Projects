@@ -1,0 +1,198 @@
+/* Reset / Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand: #6a5fff;
+  --bg: #f6f6f6;
+  --card: #fff;
+  --text: #222;
+  --muted: #ffffff; /* wird für die Toolbar-Beschriftung genutzt */
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  --radius: 18px;
+}
+
+html,
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+
+/* Layout */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+header {
+  text-align: center;
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: 0.5px;
+  color: var(--brand);
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+/* Toolbar */
+.toolbar {
+  background: var(--brand);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--shadow);
+}
+
+.toolbar-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.input,
+.select {
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  padding: 0 12px;
+  outline: none;
+  min-width: 240px;
+}
+
+.select {
+  min-width: 160px;
+}
+
+/* Kategorien-Buttons (keine .chip-Klasse nötig) */
+.categories {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#categories button {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 12px;
+
+  color: #000000;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.06s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+#categories button:hover {
+  transform: translateY(-1px);
+}
+#categories button:active {
+  transform: translateY(0);
+}
+
+#categories button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
+}
+
+/* aktive Kategorie (per JS .classList.toggle('active')) */
+#categories button.active {
+  background: #fff;
+  color: #000;
+  box-shadow: var(--shadow);
+}
+
+.grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 360px;
+}
+
+.card-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  padding: 12px;
+  background-color: #cfcfcf;
+}
+
+.card-media img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.card-body {
+  padding: 14px 16px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 14px;
+  line-height: 1.3;
+  height: 36px;
+  overflow: hidden;
+}
+
+.price {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 16px;
+}
+
+.btn {
+  background: var(--brand);
+  border: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 2px;
+}
+
+/* Helper */
+.hidden {
+  display: none;
+}
+.muted {
+  color: var(--muted);
+}
+.footer-space {
+  height: 24px;
+}

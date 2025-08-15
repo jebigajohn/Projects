@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SuperFakeStore</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>SuperFakeStore</header>
+
+      <section class="toolbar">
+        <div class="toolbar-row">
+          <input id="search-input" class="input" type="search" placeholder="Search by title" />
+          <select id="sort-select" class="select">
+            <option value="default">Sort by</option>
+          </select>
+        </div>
+
+        <div class="toolbar-row">
+          <span class="muted">Filter by Categories:</span>
+          <div id="categories" class="categories">
+            <button id="electronicsBtn">electronics</button>
+            <button id="jeweleryBtn">jewelery</button>
+            <button id="menClothingBtn">men's clothing</button>
+            <button id="womenClothingBtn">women's clothing</button>
+          </div>
+        </div>
+      </section>
+
+      <main id="products">
+        <div id="products-grid" class="grid"></div>
+      </main>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
