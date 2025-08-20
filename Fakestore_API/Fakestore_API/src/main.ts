@@ -1,3 +1,4 @@
+import type { Product } from "./interface/Product"
 import "./style.css"
 
 const API = "https://fakestoreapi.com/products"
@@ -8,14 +9,7 @@ const jeweleryBtn = document.getElementById("jeweleryBtn") as HTMLButtonElement
 const menClothingBtn = document.getElementById("menClothingBtn") as HTMLButtonElement
 const womenClothingBtn = document.getElementById("womenClothingBtn") as HTMLButtonElement
 const searchInput = document.getElementById("search-input") as HTMLInputElement
-
-type Product = {
-  id: number
-  category: string
-  image: string
-  title: string
-  price: number
-}
+const sortSelect = document.getElementById("sort-select") as HTMLSelectElement
 
 let allProducts: Product[] = []
 
@@ -36,7 +30,6 @@ function createCard(p: Product): HTMLElement {
   const title = document.createElement("h3")
   title.className = "title"
   title.textContent = p.title
-
   body.appendChild(title)
 
   const actions = document.createElement("div")
@@ -84,6 +77,15 @@ searchInput.addEventListener("input", () => {
   }
   const filtered = allProducts.filter((p) => p.title.toLowerCase().includes(q))
   renderProducts(filtered)
+})
+
+sortSelect.addEventListener("change", () => {
+  const value = sortSelect.value
+  let list = [...allProducts]
+  if (value === "price-asc") list.sort((a, b) => a.price - b.price)
+  if (value === "price-desc") list.sort((a, b) => b.price - a.price)
+  if (value === "rating") list.sort((a, b) => b.rating?.rate)
+  renderProducts(list)
 })
 
 fetch(API)
