@@ -8,11 +8,17 @@
   </head>
   <body>
     <nav id="nav">
-      <a href="#" data-view="films">Filme</a>
-      <a href="#" data-view="planets">Planeten</a>
-      <a href="#" data-view="people">Personen</a>
+      <a href="#" id="films">Filme</a>
+      <a href="#" id="planets">Planeten</a>
+      <a href="#" id="people">Personen</a>
+
+      <!-- je Ressource ein eigenes Suchfeld -->
+      <input type="text" id="film-search" placeholder="Filme suchen…" class="hidden" />
+      <input type="text" id="planet-search" placeholder="Planeten suchen…" class="hidden" />
+      <input type="text" id="people-search" placeholder="Personen suchen…" class="hidden" />
     </nav>
-    <main id="app"></main>
+    <main id="output"></main>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

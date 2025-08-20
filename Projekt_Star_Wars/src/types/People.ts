@@ -1,6 +1,5 @@
-export interface Planet {
+export interface People {
   message: string
-
   results: Result[]
 }
 

@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "StarJedi";
+  src: url("/fonts/StarJedi/StarJedi.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* 2) Theme-Variablen */
+:root {
+  --bat-bg: #0a0c10; /* sehr dunkles Grau/Schwarz */
+  --bat-bg-2: #0f131a; /* tieferer Layer */
+  --bat-card: #12161d; /* Karten-Hintergrund */
+  --bat-border: #1c2330; /* dezente Rahmenfarbe */
+  --bat-yellow: #f8e71c; /* Bat-Signal Gelb */
+  --bat-yellow-soft: #d9c800; /* abgedunkelt */
+  --text: #e6ecf2; /* heller Text */
+  --text-dim: #aeb6c1; /* sekundärer Text */
+  --glow: 0 0 12px rgba(248, 231, 28, 0.4);
+  --radius: 16px;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+}
+
+/* 3) Globales Layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 85% 15%, rgba(248, 231, 28, 0.05), transparent 60%),
+    radial-gradient(800px 400px at 10% 0%, rgba(248, 231, 28, 0.04), transparent 50%),
+    linear-gradient(180deg, var(--bat-bg), var(--bat-bg-2));
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "StarJedi", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* 4) „Bat‑Signal“ Deko (dezent) */
+body::before {
+  content: "";
+  position: fixed;
+  top: -20vmin;
+  right: -10vmin;
+  width: 60vmin;
+  height: 60vmin;
+  background: radial-gradient(closest-side, rgba(248, 231, 28, 0.18), transparent 70%);
+  filter: blur(6px);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+
+/* 5) Navigation */
+nav#nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: rgba(10, 12, 16, 0.7);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--bat-border);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+#nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--bat-border);
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+#nav a::before {
+  /* kleiner gelber „Bat‑Akzent“ */
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--bat-yellow);
+  box-shadow: var(--glow);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.75;
+}
+
+#nav a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+  border-color: var(--bat-yellow-soft);
+  color: var(--bat-yellow);
+}
+
+#nav a:hover::before {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* 6) Main‑Area */
+main#output {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1.25rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+/* 7) Karten/Zeilen (deine <p>-Einträge) */
+#output p {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--bat-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  letter-spacing: 0.02em;
+  transition: transform 0.12s ease, box-shadow 0.15s ease, border-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dezent animierter Glanzstreifen */
+#output p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(248, 231, 28, 0.08), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.4s ease;
+}
+
+#output p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.6);
+  border-color: rgba(248, 231, 28, 0.3);
+}
+
+#output p:hover::after {
+  left: 110%;
+}
+
+/* 8) Headings in Star‑Look */
+h1,
+h2,
+h3,
+nav#nav a {
+  font-family: "StarJedi", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing: 0.06em;
+}
+
+h2 {
+  margin: 1rem auto 0.5rem;
+  text-align: center;
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  color: var(--bat-yellow);
+  text-shadow: 0 0 18px rgba(248, 231, 28, 0.2);
+}
+
+/* 9) Kleine Utility-Klassen (optional nutzbar) */
+.center {
+  display: grid;
+  place-items: center;
+}
+.muted {
+  color: var(--text-dim);
+}
+.separator {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--bat-border), transparent);
+  margin: 0.5rem 0;
+}
+
+/* 10) Responsiveness */
+@media (min-width: 768px) {
+  main#output {
+    grid-template-columns: 1fr;
+  }
+  #nav a {
+    padding: 0.65rem 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #nav a,
+  #output p {
+    transition-duration: 0.2s;
+  }
+}
