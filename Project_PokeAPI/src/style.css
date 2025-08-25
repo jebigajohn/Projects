@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+button {
+  width: fit-content;
+  height: 2rem;
+  width: 7rem;
+}
+button:hover {
+  cursor: pointer;
+}
